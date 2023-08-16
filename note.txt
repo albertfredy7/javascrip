@@ -1,1 +1,53 @@
-java script
+  java script
+   ........
+>>Dynamically typed language
+
+1.display console.log(content)
+
+datatype
+1.text-String
+2.integer-Number,decimal
+3.true or false-boolean 
+
+concatination-we need to use the + for put the diff. datatype in one.but it not considerd as a String.
+if we has to considerd as an string then we put the ',' in the position of an +.
+
+
+variables:is used to store data 
+
+rules: identifiers
+1.character
+
+2.two or more words no space between(underscore can be used in between two words)
+
+3.keywords:      assign:>>  
+> const
+> var
+> let
+
+ temperate literals
+  ...............
+`text ${variable}`
+
+7.conditional statement
+ if(condition)
+ {
+  statement
+ }
+ else
+ {
+  statement
+ }
+
+
+
+ 8. looping statement : todo same task repeatedly
+
+  - while
+      syntax
+      
+        initializing variables
+        while(condition){
+          statement to execute
+          statement to increment the variable
+        }
