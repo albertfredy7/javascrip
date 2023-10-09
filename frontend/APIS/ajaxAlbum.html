@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX - Todo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+                <h1 class="text-center MT-5">
+                    Todo LIST
+                </h1>
+                <table class="w-100 table-bordered text-center mt-5 ">
+                    <thead>
+                        <tr>
+                            <th class="p-3">UserId</th>
+                            <th class="p-3">ID</th>
+                            <th class="p-3">Title</th>
+                        </tr>
+                    </thead>
+                    <tbody id="result">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</body>
+<script>
+    // 1) Create an object for the class XMLHttpRequest
+    const http = new XMLHttpRequest();
+    
+    // 2) Create/open a connection to the API using this object
+    http.open('GET', 'https://jsonplaceholder.typicode.com/albums');
+    
+    // 3) Send the request
+    http.send();
+    
+    // Readystate - variable value changes from 1 to 4
+    http.onreadystatechange = () => {
+        if (http.readyState === 4) {
+            if (http.status >= 200 && http.status < 300) {
+                // const result = document.getElementById('result');
+                const alltodo = JSON.parse(http.responseText);
+                alltodo.forEach(item => {
+                    result.innerHTML += `
+                        <tr>
+                            <td>${item.userId}</td>
+                            <td>${item.id}</td>
+                            <td>${item.title}</td>
+                        </tr>
+                    `;
+                });
+            } else {
+                console.log('Failed to fetch data');
+            }
+        }
+    };
+</script>
+
+
+
+</html>

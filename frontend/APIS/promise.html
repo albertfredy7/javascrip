@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Contest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h1 class="text-primary text-center mt-5">Lottery Contest</h1>
+                <h2 class="text-success mt-4 text-center" id="result">Result</h2>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</body>
+<script>
+    //object
+    const luckycontext = new Promise((res,res)=>{
+        let mylottery =3
+        //math.random - random number generate between 0 - 1
+        let lottery = Math.floor(Math.random()*5)
+        if(lottery==mylottery){
+            res('you won')
+        }
+        else{
+            rej('better luck next time')
+        }
+
+    })
+</script>
+</html>

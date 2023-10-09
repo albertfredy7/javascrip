@@ -1,5 +1,9 @@
-  java script
+b  java script
    ........
+
+##################################################### PROCEDURAL PROGRAMING ##################################################################
+
+
 >>Dynamically typed language
 
 1.display console.log(content)
@@ -30,14 +34,14 @@ rules: identifiers
 `text ${variable}`
 
 7.conditional statement
- if(condition)
- {
-  statement
- }
- else
- {
-  statement
- }
+            if(condition)
+            {
+              statement
+            }
+            else
+            {
+              statement
+            }
 
 
 
@@ -51,3 +55,492 @@ rules: identifiers
           statement to execute
           statement to increment the variable
         }
+
+
+
+  -for
+      syntax  
+
+          for(initializing;condition;update variable){
+            statements to execute
+          }
+
+
+
+9) function  :  to do specific task repeatedly at different portion of the program
+                -it supports function hoisting which we can call the function before definiition
+
+          it has two parts 
+            - function definition
+            - function call
+
+
+
+
+            function definition
+            ------------------------------
+
+            function function_name(arg1,.....,argn){
+              task
+            }
+
+
+            function call
+            --------------------------------
+
+            function_name(arg1,.......,argn)
+
+      
+b)arrow functions
+    syndax:
+     variable= (arg1,arg2.....argn) => {statement1,statement2......statementn}
+
+  c)predefined functions not defined by the user but can be call.
+    
+    eg: *console.log()
+        *typeof()
+        *alert()
+        *parseInt()
+        *number()
+  d)callback function
+    =>calling a function inside another function.
+    
+    *sychronose function will call instently
+    *asynchronous function will call with time delay
+
+    *anonymous fuction: self exicuting function.
+
+  e)nested function
+   =>function defined inside a another function definition.
+
+   *clouser function : parent property can be accesed by the chid but child property cannot be accesed by the parent.
+
+
+
+
+
+
+
+Arrays
+-----------------------------------------------------------------------------------------
+
+Can hold more than one values
+
+creation
+---------------------
+
+variable_name=[]
+
+array can hold more than one datatype
+
+index start from 0
+length start from 1
+data are stored as key value pairs
+  key: index
+  value: array items
+
+javascript has infinite Arrays
+
+
+Array method
+---------------------------------------------------
+
+  push      // item added at the end
+  unshift   // item added at the first
+  pop       // delete the last item of array
+  shift     // delete the first item
+  sort      // sorting the array elements
+  forEach()  // same as that of for of - return void
+  map(callback)       // create a new array having same number of elements  as that of parent array
+  Reduce(callback)    // return a single value : eg : highest ,lowest,sum
+  filter()    // to create an array satisfying a specific condition
+  flat()      // 2d array to 1d array
+  find()      // to find a single value from the array
+  some()      // to check a condition is true or not
+  include()   // to find an element is there in array or not - return boolean value
+  slice()     // to remove or add items int array at different positions
+  indexOf()   // to find the index of an item in an array
+
+
+
+  ------------------------------------------------------------------------------------------------------------------
+
+
+
+
+different ways to display array items
+  -for
+  -for in  // index values
+  -for of  // array valuues
+
+  string methods :
+  ------------------------------------------------------------------------
+
+    - startsWith : to check whether a given string starts with a particular
+    letter / charecter ' case sensetive'
+
+    - endsWith : to check whether a given string ends with a particular charecter  #case sensetive
+
+    - substring(start,end)
+
+    - toUpperCase : convert the given string to capital letters
+
+    -toLowerCase : convert the given string to small letters
+
+    -trim : to remove extra space
+
+    -slice 
+                ex:                            str='fdjgdgb'
+                              'fdjgdgb'
+                              str.slice(0,3)
+                              'fdj'
+                              str.substring(0,3)
+                              'fdj'
+                              str.slice(0,-4)
+                              'fdj'
+
+    -split()
+                 ex:               str.split(' ')
+                            (2) ['hello', 'world']
+                            str.split('')
+                            (11) ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']
+
+
+    - replace() : to replace a first particular character/word from given string
+
+    - replaceAll() : to replace a particular charecter/word from the given string - change all the matching word
+
+    - array.from() : it convers the given string into array
+
+
+
+
+
+
+Objects
+-------------------------------------
+
+It can store more than one data with higher clarity
+
+
+Creation
+---------------------------------------------
+
+variable_name={
+  key1:value1.
+  key2:value2,..........
+  keyn:valuen
+}
+
+
+
+
+
+
+####################################################### OBJECT ORIENTED PROGRAMING #########################################################
+
+BASICS
+  1) class    - its a blueprint of object
+  2) Object    - objects are created based on the class
+  3) reference  - memory locations were properties and methods are stored
+
+
+
+  class
+  ---------------------------
+
+  class name should starts with the capital letter
+  // property - variables inside class
+  // constructor - to initialize the propery
+  // methods - functions inside the class
+
+  class class_name{
+
+  }
+
+
+  this.variable_name   :     instant variable
+
+
+  there is no need for calling the constructor seperately.it will be automatically invoked
+
+  the references will be unique
+
+
+  Pillers of OOPS
+  --------------------------------------------------------------------------------------------------
+
+  1)Inheritance
+  2)Polymorphism
+  3)Encapsulation
+  4)Abstraction
+
+
+  Inheritance
+  ---------
+  Used to access methods and properties from from class to another
+  parent class - super class / base class
+  child class - derived class  / sub class
+
+  two type of Inheritance
+  
+  1) classical inheritance - keyword extends
+  2) Object Inheritance - keyword     __proto__
+
+  Multilevel Inheritance
+
+
+  Polymorphism
+  ------------------------------
+
+  poly - many
+  morphism - form
+ 
+ 1)function/method overloading
+        methods having same name but different arguments
+        * executed based on the number of the arguments passed
+        * javascript doesnt support method overloading. it always execute the last method
+          * Achieved using the spread operator (...)
+
+ 2)function/method overriding
+        methods with same name and same arguments
+          - javascript supports this concept
+
+
+Exception Handling
+------------------------
+
+exeception : run time error
+
+1) try - statement that may have error
+2) catch - only execute when there is an error
+3) finally - execute in both case (try,catch)
+
+
+
+
+
+###############################################################################################################################################
+
+                                                       JAVASCRIPT - FRONTEND
+
+################################################################################################################################################
+
+
+Browser engine - html element,css,javascript - read - display
+javascript - html element css element - cannot read directly
+
+DOM -Document Object Model
+---------------------------
+  -javascript can read DOM
+  -it is a tree structure of html document created by the browser
+  - every tag is considered as object
+
+                                -----------
+                                |   HTML  |
+                                -----------
+                                /          \                        
+                               /            \
+                              /              \
+                            HEAD            BODY
+                           /  |  \             \
+                          /   |   \             \
+                         /    |    \             \
+                           META   TITLE          H1 
+
+
+How to apply js in html file
+--------------------------------
+
+1) Internal js - <script> js code </script> - after the </body> tag
+2) External js - <script src="url">  - reduces the complexity of html file
+                                     - reduce the loading time
+
+How to access thml elements using js
+---------------------------------------------
+
+1) document.getElementByTagName('')  -  to access html elements - returns html collection
+                                                                - similar to array but  not exactly array
+                                                                - can hold more than one html elements
+
+2) document.getElementById('id')     -  return corresponding tag
+
+3) document.getElementByClassNAme('class_name)  -  return html collection
+
+4) document.quwrySelector('tag_name / #id / .class_name') - return tag - first satisfying tag
+
+5) document.quwrySelectorAll('tag_name / #id / .class_name') - return nodelist
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+How to access the content inside the tag
+-----------------------------------------
+
+1) .innerHTML
+2) textcontet
+3)  document.write
+
+Events
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Definition It is the action performed by the user which leads to some update in DOM
+
+1) click
+2) change
+3) keydown
+4) submit
+5) load 
+
+
+Database - to store the data
+value - to store the key as string
+
+Browser has its own storage space - local storage - few amount of data can only be stored.
+
+key- value - where both key and value are string
+
+Method to do operations in local storage
+---------------------------------------------------------------------------------
+
+1) SetItem("key) - to add data to the local storage
+2) getItem("key) - to read / retrieve data from local storage
+3) removeItem("key) - to delete data from local storage. 
+
+JSON.stringify - to convert into string
+
+
+API - Application programing interface
+------------------------------------------
+
+To communicate with software available in the internet
+
+Different types of API
+----------------------
+1) Public API           -   publically available
+2) Partner API          -   one company to another company data sharing - authentication
+3) Private API          -   within the company
+4) Composite API        -   interconnected APIS
+
+HTTP - hypertext ransfer Protocol
+-----------------------------------
+   - Protocol - set of rules --- references FTP
+
+HTTPS - hypertext ransfer Protocol secured
+--------------------------------------------
+   - more secured
+
+
+HTTP methods
+-------------
+
+1) get - to read or retrieve data from the destination
+2) post - to add data to the destination
+3) put - to update data
+4) delete - to remove data
+
+
+Requests have 2 parts
+---------------------
+  1) head - for more security/authentication
+  2) body - holds sharing data
+
+
+
+Response status
+----------------
+
+1)1xx series - info
+2)2xx series - succsessfull
+3)3xx series - redirection
+4)4xx series - clientside error
+5)5xx series - server side error
+
+XML / JSON
+---------------
+
+JSON - javascript object notation
+  - its the common format for the communication
+  - it is  a format for sharing data
+
+  syntax
+  --------
+
+  {
+    "key":value
+  }
+  1) data shouldbe key value pairs
+  2) shouldbe seperated by comas
+  3) curly bracket to hold the object
+  4)square bracket to hold the array
+
+
+  1) JSON.stringify()
+  2) JSON.parse()
+
+
+
+  url - uniform resource locator
+  -------------------------------
+  it is the resource address in the internet
+
+  REST API
+  ----------
+  Its a software architecture style that was created ti guide the design and development of web
+
+
+                                                                                                              -------------
+       -----------                 ------------                           ----------                         |            |
+      |  client   |-------------->|   http     |------------------------> |  url   | ----------------------->|   server   |
+      ------------                 -------------                            --------                         |            |
+             \                        get                                                                     ------------
+              \                       post                                                                   / 
+               \                      put                                                                   /
+                \                     delete                                                               / 
+                 \                                                                                        /    
+                  \                                                                                      /
+                   \                                                                                    /
+                    \                                                                                  /  
+                     \                                                                                /
+              ----------------                                                                       /
+              |               |                                                                     /
+              |     JSON      | ------------------------------------------------------------------>/
+              |               |
+               ---------------
+
+              "key":value
+
+
+              REFER : SOAP(Simple Object Access Protocol)
+                      RPC(Remote Procedural call)
+
+
+    Testing tool for API
+    ----------------------
+
+    1) Postman
+    2) Thunder client - extension of vscode
+
+
+    How to cretae api using js
+    ---------------------------
+
+    1) AJAX - Asynchronous javascript XML
+        - XMLHTTP request class
+
+
+    2) fetch()
+          promise
+          --------
+          state
+            -resolve() - .then()
+            -pending
+            -reject - .catch()
+
+
+    3) asyn - await
+        Advantage
+            1) can be stored to variable
+            2) only one .then() is used
+
+                      

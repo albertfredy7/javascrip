@@ -14,3 +14,4 @@ while (i<input) {
     sum=sum+str
     i++
 }
+;+console.log(sum);
